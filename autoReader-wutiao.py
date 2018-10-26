@@ -61,7 +61,7 @@ swipeDown(3000)
 print(u"下滑刷新")
 time.sleep(5)
 ReadCound = 1 #记录自动阅读的次数
-for i in range(21):
+for i in range(2):
     time.sleep(1)
     swipeUp(3000)
     time.sleep(1)
@@ -71,7 +71,7 @@ for i in range(21):
     if(isFind("com.kingnet.fiveline:id/ivAttendance")):
         print(u"点击的是视频，没有页面跳转，结束本次循环！")
         continue #跳出本次循环
-    print(u"第%d此阅读",ReadCound)
+    print("the %d times Read" %ReadCound)#python 中打印带格式的参数时，字符串与说明之间不用逗号隔开，注意！！
     #print(u"点击了第一个内容")#前面加U中文就不会乱码，否则打印出来的中文是乱码
     time.sleep(6)
     print(u"等待6秒钟")
