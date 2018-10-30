@@ -67,13 +67,22 @@ def is_toast_exist(driver,toastmessage,timeout=30,poll_frequency=0.5):
         except:
             return False
 #元素查找
-def isFind(c):
-    if driver.find_elements_by_id(c) == []:
+def isFind_byName(c):
+    if driver.find_elements_by_name(c) == []:
         print(u"未找到元素")
-        return  True
+        return  False
     else:
         print(u"找到元素")
-        return False
+        return True
+ #提供一个作者列表，如果文章的作者在列表中，则返回True
+ #否则，返回False
+def find_by_Auth(AuthList):
+    result = False
+    for Author in AuthList:
+        if(isFind_byName(Author)):
+            result = True
+            break
+    return result
 print("opened")
 time.sleep(25)
 print("sleep end")
@@ -86,10 +95,13 @@ driver.find_element_by_name(u"发现内容").click()
 print(u"进入内容投票页面")
 #点击进入内容投票页面
 time.sleep(2)
-for i in range(112):
+authorList = [u"人民网",u"36氪",u"科技早报",u"家乡体育",u"新华社",u"五条号",u"中国证券报"]
+for i in range(50):
     print("the %d times finds" % ReadCound)
-    time.sleep(25)
-    driver.find_element_by_name(u"发现者投票").click()
+    time.sleep(5)
+    if(find_by_Auth(authorList)):
+        time.sleep(20)
+        driver.find_element_by_name(u"发现者投票").click()
     # if(is_toast_exist(driver,u"审核内容")):
     #     print(u"可以投票了")
     #     driver.find_element_by_name(u"发现者投票").click()
