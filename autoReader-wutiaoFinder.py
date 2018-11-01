@@ -95,8 +95,8 @@ driver.find_element_by_name(u"发现内容").click()
 print(u"进入内容投票页面")
 #点击进入内容投票页面
 time.sleep(2)
-authorList = [u"人民网",u"36氪",u"小格说娱",u"科技早报",u"家乡体育",u"新华社",u"五条号",u"中国证券报",u"娱乐草莓",u"时刻体育"]
-for i in range(50):
+authorList = [u"人民网",u"受惊的青蛙",u"西陆网",u"飞鹰TV",u"36氪",u"小格说娱",u"科技早报",u"家乡体育",u"新华社",u"五条号",u"中国证券报",u"娱乐草莓",u"时刻体育"]
+for i in range(150):
     print("the %d times finds" % ReadCound)
     time.sleep(5)
     if(find_by_Auth(authorList)):

@@ -61,13 +61,13 @@ swipeDown(3000)
 print(u"下滑刷新")
 time.sleep(5)
 ReadCound = 1 #记录自动阅读的次数
-for i in range(2):
+for i in range(24):
     time.sleep(1)
     swipeUp(3000)
     time.sleep(1)
     print(u"向下滑动6秒")
     driver.find_elements_by_class_name("android.view.ViewGroup")[0].click()
-    time.sleep(2)
+    time.sleep(8)
     if(isFind("com.kingnet.fiveline:id/ivAttendance")):
         print(u"点击的是视频，没有页面跳转，结束本次循环！")
         continue #跳出本次循环
