@@ -98,10 +98,10 @@ time.sleep(2)
 authorList = [u"人民网",u"受惊的青蛙",u"西陆网",u"飞鹰TV",u"36氪",u"小格说娱",u"科技早报",u"家乡体育",u"新华社",u"五条号",u"中国证券报",u"娱乐草莓",u"时刻体育"]
 for i in range(150):
     print("the %d times finds" % ReadCound)
-    time.sleep(5)
+    time.sleep(8)
     if(find_by_Auth(authorList)):
-        time.sleep(20)
-        driver.find_element_by_name(u"发现者投票").click()
+        time.sleep(17)
+    driver.find_element_by_name(u"发现者投票").click()
     # if(is_toast_exist(driver,u"审核内容")):
     #     print(u"可以投票了")
     #     driver.find_element_by_name(u"发现者投票").click()
