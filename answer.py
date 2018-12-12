@@ -9,3 +9,5 @@ reshapArrayList = np.array(arryList)
 reshapArrayList = reshapArrayList.reshape((3,2))
 
 print(reshapArrayList)
+
+#回答百度知道上的问题
